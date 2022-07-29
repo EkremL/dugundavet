@@ -1,0 +1,43 @@
+﻿@model IEnumerable<dugundavet.Models.Cevap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wedding Attendees</title>
+</head>
+<body>
+    <h3>Attendees</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>E_mail</th>
+                <th>Phone_number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (dugundavet.Models.Cevap x in Model)
+            {
+                <tr>
+                    <td>@x.Name </td>
+                    <td>@x.Surname </td>
+                    <td>@x.E_mail </td>
+                    <td>@x.Phone_Number </td>
+                </tr>
+            } 
+        </tbody>
+    </table>
+    <div>
+        
+
+         <p> Click to back go to main menu<a asp-action="Index"> here. </a> </p>
+
+    </div>
+</body>
+</html>

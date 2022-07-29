@@ -1,0 +1,55 @@
+﻿@model dugundavet.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cevap_Formu</title>
+    <link href = "/css/styles.css" rel=" stylesheet"/>
+
+</head>
+<body>
+    <form asp-action="Cevap_Formu" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <h2>
+            <label asp-for="Name"> Name: </label>
+            <input asp-for="Name" />
+            </h2>
+        </div>
+        <div>
+            <h2>
+            <label asp-for="Surname"> Surname: </label>
+            <input asp-for="Surname" />
+            </h2>
+        </div>
+        <div>
+            <h2>
+            <label asp-for="E_mail"> Mail: </label>
+            <input asp-for="E_mail" />
+            </h2>
+        </div>
+        <div>
+            <h2>
+            <label asp-for="Phone_Number"> Phone Number: </label>
+            <input asp-for="Phone_Number" />
+            </h2>
+        </div>
+        <div>
+            <h2>
+            <label> Will you join wedding ? </label>
+            <select asp-for="WillYouJoin">
+                <option value = "">Please make a choice!</option>
+                <option value = "true">YES</option>
+                <option value = "false">NO</option>
+            </select>  
+            </h2>
+        </div>
+        <button type = "submit">Send reply</button>
+    </form>
+</body>
+</html>
